@@ -1,0 +1,31 @@
+{
+   "name": "nengine",
+   "description": "nEngine - a phaserJs & vue tool for games development",
+   "private": true,
+   "version": "0.0.0",
+   "type": "module",
+   "scripts": {
+      "dev": "vite",
+      "build": "vue-tsc -b && vite build",
+      "preview": "vite preview",
+      "simulate:prod": "npm run build && python3 -m http.server 8000 --directory dist"
+   },
+   "dependencies": {
+      "easystarjs": "^0.4.4",
+      "phaser": "^3.86.0",
+      "rxjs": "^7.8.1",
+      "vue": "^3.5.12"
+   },
+   "devDependencies": {
+      "@vitejs/plugin-vue": "^5.1.4",
+      "autoprefixer": "^10.4.20",
+      "jszip": "^3.10.1",
+      "postcss": "^8.4.47",
+      "prettier": "3.3.3",
+      "tailwindcss": "^3.4.14",
+      "tone": "^15.1.22",
+      "typescript": "~5.6.2",
+      "vite": "^5.4.10",
+      "vue-tsc": "^2.1.8"
+   }
+}
