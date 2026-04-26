@@ -6,14 +6,12 @@ const visibleLetters = ref<number[]>([])
 const showSubtitle = ref(false)
 
 onMounted(() => {
-    // Sequenza di apparizione delle lettere con ritardo magnetico
     letters.forEach((_, index) => {
         setTimeout(() => {
             visibleLetters.value.push(index)
         }, index * 300)
     })
 
-    // Mostra il sottotitolo dopo che tutte le lettere sono arrivate
     setTimeout(() => {
         showSubtitle.value = true
     }, letters.length * 300 + 500)
@@ -74,7 +72,7 @@ onMounted(() => {
 
 .letter-text {
     font-family: 'Press Start 2P', cursive;
-    font-size: 110px;
+    font-size: 80px;
     color: #ff8c00;
     text-shadow: 
         4px 4px 0px #8b4513, 
@@ -105,12 +103,12 @@ onMounted(() => {
 
 .subtitle-text {
     font-family: 'Silkscreen', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     white-space: nowrap;
     display: block;
-    letter-spacing: 6px; /* Spaziatura ampia per look tech */
+    letter-spacing: 6px;
 }
 </style>
